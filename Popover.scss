@@ -1,0 +1,109 @@
+@import '../../style/variables.scss';
+
+.PopoverOverlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: $z-index-popovers;
+  background-color: rgba(20, 20, 20, 0);
+  transition: background-color 0.2s linear;
+
+  &.transitioned {
+    background-color: rgba(20, 20, 20, 0.8);
+
+    .Popover, .PopoverTip  {
+      opacity: 1;
+      transform: translateX(0px) translateY(0px);
+    }
+  }
+}
+
+.Popover {
+  background-color: #fff;
+  position: absolute;
+  padding: 1em;
+  box-shadow: 1px 1px 10px 0px #000;
+  width: 600px;
+  box-sizing: border-box;
+  max-width: 90%;
+  min-height: 150px;
+  opacity: 0;
+  transition: opacity 0.2s linear, transform 0.2s ease-out;
+}
+
+.PopoverTip {
+  width: 0;
+  height: 0;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.2s linear, transform 0.2s ease-out;
+}
+
+:global(.left), :global(.right) {
+  .PopoverTip {
+    border-top: 25px solid rgba(0,0,0,0);
+    border-bottom: 25px solid rgba(0,0,0,0);
+  }
+}
+
+:global(.right) {
+  .PopoverTip {
+    border-right: 20px solid #fff;
+    border-left: 0;
+  }
+  .Popover, .PopoverTip  {
+    transform: translateX(30px);
+  }
+}
+
+:global(.left) {
+  .PopoverTip {
+    border-left: 20px solid #fff;
+    border-right: 0;
+  }
+  .Popover, .PopoverTip  {
+    transform: translateX(-30px);
+  }
+}
+
+:global(.top), :global(.bottom) {
+  .PopoverTip {
+    border-left: 25px solid rgba(0,0,0,0);
+    border-right: 25px solid rgba(0,0,0,0);
+  }
+}
+
+:global(.top) {
+  .PopoverTip {
+    border-top: 20px solid #fff;
+    border-bottom: 0;
+  }
+  .Popover, .PopoverTip  {
+    transform: translateY(-30px);
+  }
+}
+
+:global(.bottom) {
+  .PopoverTip {
+    border-bottom: 20px solid #fff;
+    border-top: 0;
+  }
+  .Popover, .PopoverTip  {
+    transform: translateY(30px);
+  }
+}
+
+@media screen and (max-width: $screen-xs-max) {
+  .Popover {
+    position: absolute;
+    width: 90%;
+    left: 5% !important;
+    box-sizing: border-box;
+  }
+
+  .PopoverTip {
+    display: none;
+  }
+}
