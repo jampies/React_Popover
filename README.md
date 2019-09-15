@@ -1,4 +1,4 @@
-# React_Popover
+# Simple React Popover ![](https://travis-ci.org/jampies/React_Popover.svg?branch=master)
 A React Popover component that adds an overlay but highlights the anchor element
 
 Example available here: https://reactpopover.murrayleroux.now.sh

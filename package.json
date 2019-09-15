@@ -2,10 +2,10 @@
   "name": "simple-react-popover",
   "version": "1.0.5",
   "description": "A Popover component built with react",
-  "main": "index.js",
+  "main": "dist/Popover.js",
   "scripts": {
     "test": "mocha --require ./test/testSetup.js \"./**/*.spec.js\"",
-    "prepare": "npm run build-prod",
+    "prepare": "babel src --ignore *.spec.js --ignore *.story.js --out-dir ./dist --presets=@babel/env",
     "start": "start-storybook",
     "build": "build-storybook -o public",
     "deploy": "now --token=$NOW_TOKEN --public && now --token=$NOW_TOKEN alias",
@@ -27,7 +27,10 @@
   },
   "homepage": "https://github.com/jampies/React_Popover#readme",
   "devDependencies": {
+    "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
     "@storybook/addon-knobs": "^5.2.0",
     "@storybook/react": "^5.2.0",
     "babel-loader": "^7.1.5",
@@ -47,6 +50,7 @@
     "webpack-cli": "^3.3.8"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.6.0",
     "classnames": "^2.2.6",
     "css-loader": "^3.2.0",
     "node-sass": "^4.12.0",

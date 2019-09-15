@@ -1,6 +1,6 @@
 module.exports = {
-    entry: './src/Popover.js',
-    mode: 'production',
+    entry: './index.js',
+    mode: 'development',
     module: {
         rules: [
             {
