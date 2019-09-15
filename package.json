@@ -5,7 +5,8 @@
   "main": "dist/Popover.js",
   "scripts": {
     "test": "mocha --require ./test/testSetup.js \"./**/*.spec.js\"",
-    "prepare": "babel src --ignore *.spec.js --ignore *.story.js --out-dir ./dist --presets=@babel/env",
+    "prepare": "webpack",
+    "babel": "babel src --ignore *.spec.js --ignore *.story.js --out-dir ./dist --presets=@babel/env",
     "start": "start-storybook",
     "build": "build-storybook -o public",
     "deploy": "now --token=$NOW_TOKEN --public && now --token=$NOW_TOKEN alias",
