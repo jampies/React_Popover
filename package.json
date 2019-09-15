@@ -1,6 +1,6 @@
 {
   "name": "simple-react-popover",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Popover component built with react",
   "main": "dist/main.js",
   "scripts": {
