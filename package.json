@@ -1,11 +1,11 @@
 {
   "name": "simple-react-popover",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A Popover component built with react",
   "main": "index.js",
   "scripts": {
     "test": "mocha --require ./test/testSetup.js \"./**/*.spec.js\"",
-    "prepublish": "npm run build-prod",
+    "prepare": "npm run build-prod",
     "start": "start-storybook",
     "build": "build-storybook -o public",
     "deploy": "now --token=$NOW_TOKEN --public && now --token=$NOW_TOKEN alias",
