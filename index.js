@@ -1,3 +1,1 @@
-import Popover from "./src/Popover";
-
-export default Popover;
+module.exports = require('./dist/main');

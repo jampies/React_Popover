@@ -2,7 +2,7 @@
   "name": "simple-react-popover",
   "version": "1.0.4",
   "description": "A Popover component built with react",
-  "main": "./dist/main.js",
+  "main": "index.js",
   "scripts": {
     "test": "mocha --require ./test/testSetup.js \"./**/*.spec.js\"",
     "prepublish": "npm run build-prod",
