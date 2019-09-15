@@ -1,12 +1,10 @@
-@import '../../style/variables.scss';
-
 .PopoverOverlay {
   position: fixed;
   width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
-  z-index: $z-index-popovers;
+  z-index: 995;
   background-color: rgba(20, 20, 20, 0);
   transition: background-color 0.2s linear;
 
@@ -95,7 +93,7 @@
   }
 }
 
-@media screen and (max-width: $screen-xs-max) {
+@media screen and (max-width: 899px) {
   .Popover {
     position: absolute;
     width: 90%;

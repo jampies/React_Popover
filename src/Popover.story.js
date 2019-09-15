@@ -1,32 +1,30 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { boolean, select, number } from '@storybook/addon-knobs/react';
 import Popover from './Popover';
-import { withInfo } from '@storybook/addon-info';
-import ExampleContainer from '../../../.storybook/storybook-example';
+import { select, boolean, number } from '@storybook/addon-knobs';
 
 class Story extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {};
 
     this.setAnchorRef = this.setAnchorRef.bind(this);
   }
 
-  setAnchorRef (ref) {
+  setAnchorRef(ref) {
     this.setState({
       anchorRef: ref
     });
   }
 
-  render () {
+  render() {
     let isOpen = boolean('Is Open?', true);
     let direction = select('Direction', ['top', 'bottom', 'left', 'right'], 'right');
-    let anchorTop = number('Anchor Top', 0);
-    let anchorLeft = number('Anchor Left', 0);
+    let anchorTop = number('Anchor Top', 200);
+    let anchorLeft = number('Anchor Left', 700);
 
     return (
-      <ExampleContainer>
+      <div>
         <div ref={this.setAnchorRef} style={{
           width: '150px',
           height: '100px',
@@ -42,10 +40,10 @@ class Story extends React.Component {
           <h3>Heading text</h3>
           <p>Some paragraph text... Some paragraph text... Some paragraph text... Some paragraph text...</p>
         </Popover>
-      </ExampleContainer>
+      </div>
     );
   }
 }
 
-storiesOf('Miscellaneous', module)
-  .add('Popover', withInfo(`A bespoke Popover`)(() => (<Story />)));
+storiesOf('Popover', module)
+  .add('Example', () => (<Story />));
