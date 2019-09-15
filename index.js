@@ -1,3 +1,3 @@
-import Popover from "./dist/main";
+import Popover from "./src/Popover";
 
 export default Popover;
