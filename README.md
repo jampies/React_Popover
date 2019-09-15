@@ -1,9 +1,9 @@
 # React_Popover
 A React Popover component that adds an overlay but highlights the anchor element
 
-Example available here: https://reactdatenavigator.murrayleroux.now.sh
+Example available here: https://reactpopover.murrayleroux.now.sh
 
-NPM Package: https://www.npmjs.com/package/date-navigator
+NPM Package: https://www.npmjs.com/package/simple-react-popover
 
 ## Dependencies
 
@@ -17,11 +17,11 @@ NPM Package: https://www.npmjs.com/package/date-navigator
 * `npm test` runs the unit tests
 * `npm run deploy` deploys the latest to the example on zeit
 
-Any push to github will trigger a Travis build, which will update the npm package and deploy the latest version to now here: https://reactdatenavigator.murrayleroux.now.sh
+Any push to github will trigger a Travis build, which will update the npm package and deploy the latest version to now here: https://reactpopover.murrayleroux.now.sh
 
 ## Usage
 
-Install using `npm i react-popover`
+Install using `npm i simple-react-popover`
 
 ### API
 
@@ -32,7 +32,7 @@ Install using `npm i react-popover`
 ### Example
 
 ```
-import Popover from 'react-popover'
+import Popover from 'simple-react-popover'
 
 class Story extends React.Component {
   constructor(props) {
