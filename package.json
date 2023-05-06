@@ -33,7 +33,7 @@
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
     "@storybook/addon-knobs": "^5.2.0",
-    "@storybook/react": "^5.2.0",
+    "@storybook/react": "^7.0.9",
     "babel-loader": "^7.1.5",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
